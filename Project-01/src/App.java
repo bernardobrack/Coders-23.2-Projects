@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class App {
-    public static final String PATHNAME = "./src/agenda.txt";
+    public static final String PATHNAME = "agenda.txt";
     public static final Parser parser = new Parser();
 
     public enum MenuOptions {
