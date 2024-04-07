@@ -1,0 +1,14 @@
+services:
+  database:
+    image: mysql:8
+    container_name: project4-database
+    volumes:
+      - project4_db_volume:/var/lib/mysql
+      - "./scripts/schema.sql:/docker-entrypoint-initdb.d/1.sql"
+    environment:
+      MYSQL_ROOT_PASSWORD: pwd123
+      MYSQL_DATABASE: project4-db
+    ports:
+      - 3306:3306
+volumes:
+  project4_db_volume:
